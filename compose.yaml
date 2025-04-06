@@ -1,0 +1,18 @@
+services:
+  #Service 1: The Camera
+  camera:
+    
+    #image settings
+    build: 
+      context: ./camera
+  
+  #Service 2: The Server
+  server:
+    
+    #image settings 
+    build: 
+      context: ./server
+    
+    # Syntax: "HOST_PORT:CONTAINER_PORT"
+    ports:
+      - "5001:5000"
